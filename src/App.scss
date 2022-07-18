@@ -1,0 +1,19 @@
+@mixin desktopXL {
+  @media(min-width: 1440px) {
+    @content
+  }
+};
+
+@mixin desktop {
+  @media(min-width: 1024px) { @content }
+};
+
+@mixin table {
+  @media(min-width: 768px) {
+    @content
+  }
+};
+
+.container {
+  padding: 0 10px;
+}

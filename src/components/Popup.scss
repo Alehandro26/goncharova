@@ -7,16 +7,47 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+    pointer-events: none;
+
+    &.active {
+        pointer-events: all;
+        .popup__bgr {
+            display: block;
+        }
+        .popup__item {
+            transform: scale3d(1, 1, 1);
+            opacity: 1;
+        }
+    }
+
+    &__bgr {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color:rgba(0, 0, 0, 0.63);
+    }
+
+    &__menu {
+        position: relative;
+        text-align: center;
+    }
 
     &__list {
         list-style: none;
     }
 
     &__item {
+        transform: scale3d(1.2, 1.2, 1.2);
+        opacity: 0;
         padding: 10px 0;
+        transition: .5s ease;
     }
 
     &__link {
         padding: 5px;
+        color: white;
+        font-size: calc(26px + (8 + 8 * 0.7) * ((100vw - 390px) / 1024));
     }
 }

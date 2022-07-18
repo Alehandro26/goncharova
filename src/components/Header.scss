@@ -1,13 +1,18 @@
 .header {
+    position: relative;
+    z-index: 2;
     padding: 6vw 0;
+
     &__wrapper {
+        position: relative;
+        z-index: 10;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
     &__button {
-        padding: 10px 0;
+        padding: 10px;
         cursor: pointer;
 
         &.active {
@@ -24,7 +29,7 @@
         display: block;
         height: 1px;
         width: 35px;
-        background-color: black;
+        background-color: white;
         transition: 0.3s ease;
     }
 

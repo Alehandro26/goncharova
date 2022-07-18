@@ -4,10 +4,13 @@ import Popup from "./Popup";
 
 function Header() {
   const buttonPopupRef = useRef();
+  const popupRef = useRef();
+  const body = document.body;
 
   function popup() {
     buttonPopupRef.current.classList.toggle("active");
-    //popupRef.current.classList.toggle("active");
+    popupRef.current.classList.toggle("active");
+    body.classList.toggle("active");
   }
 
   return (
@@ -20,7 +23,7 @@ function Header() {
             <span className="header__button_line"></span>
           </div>
         </div>
-        <Popup />
+        <Popup data={popupRef} />
       </header>
     </>
   );
